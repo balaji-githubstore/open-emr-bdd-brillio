@@ -40,7 +40,7 @@ public class LoginSteps {
 
 	@When("I select the language as {string}")
 	public void i_select_the_language_as(String language) {
-		Select selectLan=new Select(driver.findElement(By.xpath("//select[@name='languageChoice']")));
+		Select selectLan = new Select(driver.findElement(By.xpath("//select[@name='languageChoice']")));
 		selectLan.selectByVisibleText(language);
 	}
 
@@ -51,12 +51,20 @@ public class LoginSteps {
 
 	@Then("I should get access to the portal with title as {string}")
 	public void i_should_get_access_to_the_portal_with_title_as(String expectedTitle) {
-		
-		WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(50));
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Patient']")));
-		
-		Assert.assertEquals(expectedTitle,driver.getTitle());
-		
-	}
 
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Patient']")));
+
+		Assert.assertEquals(expectedTitle, driver.getTitle());
+	}
+	
+	@Then("I should get the message as {string}")
+	public void i_should_get_the_message_as(String expectedError) {
+	    String actualError=driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
+	    Assert.assertTrue("Assertion on invalid error message",actualError.contains(expectedError)); //expect true
+	}
 }
+
+
+
+
