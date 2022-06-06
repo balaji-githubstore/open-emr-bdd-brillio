@@ -8,6 +8,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/feature/Login.feature"}
 		,glue = {"com.brillio.stepdefinitions"}
+		//,dryRun = true
+		,monochrome = true
+		//,publish = false
+		,plugin = {"html:target/cucumber-report.html","json:target/cucumber-report.json"}
 		)
 
 @RunWith(Cucumber.class)
