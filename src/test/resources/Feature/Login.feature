@@ -1,3 +1,4 @@
+@login
 Feature: Login
   In order to maintain the health records
   As a admin
@@ -6,6 +7,7 @@ Feature: Login
   Background:
 	Given I have browser with openemr application
 
+	@high @invalid
   Scenario: Invalid Credential
     When I enter username as 'john'
     And I enter password as 'john123'
