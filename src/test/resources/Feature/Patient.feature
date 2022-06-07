@@ -26,4 +26,4 @@ Feature: Patient
     Examples: 
       | username  | password  | language         | firstname | lastname | dateofbirth | gender | expectedalert | expectpatientname                   |
       | admin     | pass      | English (Indian) | John      | Ken      | 2022-06-07  | Male   | Tobacco       | Medical Record Dashboard - John Ken |
-      | physician | physician | English (Indian) | Bala      | Dina     | 2022-06-06  | Male   | Tobacco       | Medical Record Dashboard - Bala Dina |
+      #| physician | physician | English (Indian) | Bala      | Dina     | 2022-06-06  | Male   | Tobacco       | Medical Record Dashboard - Bala Dina |

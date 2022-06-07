@@ -5,7 +5,7 @@ Feature: Login
   I want to access the openemr portal
   
   Background:
-	Given I have browser with openemr application
+	Given I have 'ch' browser with openemr application
 
 	@high @invalid
   Scenario: Invalid Credential
@@ -13,7 +13,7 @@ Feature: Login
     And I enter password as 'john123'
     And I select the language as 'English (Indian)'
     And I click on login
-    Then I should get the message as 'Invalid username or password'
+    Then I should get the message as 'Invalid username or password123'
 
 	@valid
   Scenario Outline: Valid Credential
