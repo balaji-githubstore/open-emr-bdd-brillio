@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 		,monochrome = true
 		//,publish = false
 		,plugin = {"html:target/cucumber-report.html","json:target/cucumber-report.json"}
-		,tags ="@addpatient"
+		,tags ="@invalid"
 		)
 
 @RunWith(Cucumber.class)
