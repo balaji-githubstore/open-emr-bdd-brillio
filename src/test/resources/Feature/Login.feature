@@ -5,7 +5,7 @@ Feature: Login
   I want to access the openemr portal
   
   Background:
-	Given I have 'ch' browser with openemr application
+	Given I have 'ff' browser with openemr application
 
 	@high @invalid
   Scenario: Invalid Credential
