@@ -31,7 +31,7 @@ public class WebDriverKeywords {
 	
 	public String getTextUsingLocator(By locator)
 	{
-		return driver.findElement(locator).getText().strip();
+		return driver.findElement(locator).getText().trim();
 	}
 
 }

@@ -13,7 +13,7 @@ Feature: Login
     And I enter password as 'john123'
     And I select the language as 'English (Indian)'
     And I click on login
-    Then I should get the message as 'Invalid username or password123'
+    Then I should get the message as 'Invalid username or password'
 
 	@valid
   Scenario Outline: Valid Credential
